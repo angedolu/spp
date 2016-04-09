@@ -1,6 +1,6 @@
-﻿import glob
+﻿
 #Lista de las vocales, las acentuadas y la u con diéresis.
-v= ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú', 'ü']
+v= ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú', 'ü', 'y']
 #Lista de las consonantes que no son vocales.
 c= ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'ñ', 'p', 'q',
     'r', 's', 't', 'v', 'x', 'y', 'z']
@@ -16,15 +16,20 @@ ce= ['h', 'j', 'l', 'm', 'n', 'ñ', 'q', 'r', 's', 'v', 'x', 'y', 'z']
 
 
 #Minima espresión pronunciable
-def spp (pal):
+def voc (pal):
     #Determina si pal tiene alguna vocal, si no tiene es impronunciable
     #Devuelve True en caso de que tenga alguna y False si no hay vocal.
-    
+    spp= False
     for i in v:
-        return False
         if i in pal:
+            spp= True
             break
-        return True
+    return spp
+
+    
+        
+        
+
         
 
     
